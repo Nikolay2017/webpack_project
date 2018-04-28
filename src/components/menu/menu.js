@@ -1,14 +1,11 @@
-const sayHello = (greeting) => {
-    const currentHour = new Date().getHours();
-    let timeGreeting = 'Good morning!';
-
-    if (currentHour >= 12 && currentHour <= 17) {
-        timeGreeting = 'Good afternoon!';
-    } else if (currentHour >= 17) {
-        timeGreeting = 'Good evening!';
-    }
-
-    return `${timeGreeting} ${greeting}`;
+import '../menu/menu.styl';
+export default function (array, className) {
+    var menu = document.createElement("ul");
+    menu.className = className;
+    var listItems = '';
+    array.forEach(function(item) {
+        listItems += '<li>' + item + '</li>';
+    });
+    menu.innerHTML = listItems;
+    return menu;
 }
-
-export {sayHello};
