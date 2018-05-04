@@ -5,11 +5,11 @@ var CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path');
 module.exports = {
   entry: {
-    'index':path.join(__dirname, '/src/pages/index/index.js')//,
-    //'blog': path.join(__dirname, '/src/pages/blog/blog.js')
+    'index':path.join(__dirname, '/src/frontend/index.js')//,
+    //'logo':path.join(__dirname, '/src/frontend/includes/logo/logo.js')
   },
   output: {
-    filename: 'assets/js/bundle.js',
+    filename:"assets/js/[name].js",
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -49,13 +49,13 @@ module.exports = {
     new HtmlWebpackPlugin({
         filename: 'index.html',
         chunks: ['index'],
-        template: './src/pages/index/index.pug'
+        template: './src/frontend/index.pug'
     }),
-    new HtmlWebpackPlugin({
-        filename: 'blog.html',
-        chunks: ['blog'],
-        template: './src/pages/blog/blog.pug'
-    }),
+    //new HtmlWebpackPlugin({
+    //  filename: 'logo.html',
+    //  chunks: ['logo'],
+    //  template: './src/frontend/includes/logo/logo.pug'
+    //}),
     new CleanWebpackPlugin(['dist'])
   ]
 };
