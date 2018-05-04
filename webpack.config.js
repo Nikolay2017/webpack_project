@@ -5,8 +5,8 @@ var CleanWebpackPlugin = require('clean-webpack-plugin')
 const path = require('path');
 module.exports = {
   entry: {
-    'index':path.join(__dirname, '/src/frontend/index.js')//,
-    //'logo':path.join(__dirname, '/src/frontend/includes/logo/logo.js')
+    'index':path.join(__dirname, '/src/index.js')//,
+    //'logo':path.join(__dirname, '/src/includes/logo/logo.js')
   },
   output: {
     filename:"assets/js/[name].js",
@@ -49,12 +49,12 @@ module.exports = {
     new HtmlWebpackPlugin({
         filename: 'index.html',
         chunks: ['index'],
-        template: './src/frontend/index.pug'
+        template: './src/index.pug'
     }),
     //new HtmlWebpackPlugin({
     //  filename: 'logo.html',
     //  chunks: ['logo'],
-    //  template: './src/frontend/includes/logo/logo.pug'
+    //  template: './src/includes/logo/logo.pug'
     //}),
     new CleanWebpackPlugin(['dist'])
   ]
