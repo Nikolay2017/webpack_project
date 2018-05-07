@@ -1,3 +1,6 @@
+include includes/logo/logo.pug
+include includes/fio/fio.pug
+
 doctype html
 html
     head
@@ -6,5 +9,12 @@ html
         title
             
     body
-        
-        include includes/logo/logo.pug
+        div(class="conteiner")
+            div(class="column-left")
+                header
+                    +head-logo
+                    +head-fio
+
+            div(class="column-right")
+                div h1 EDUCATION
+

@@ -1,4 +1,57 @@
-h1 {
-  border: 2px solid #000;
-  color: #f00;
+.logo-circle1 {
+  width: 203px;
+  height: 203px;
+  margin: auto;
+  background-color: #3d6cb0;
+  border-radius: 101.5px;
+  margin-top: 26.5px;
+}
+.logo-circle2 {
+  width: 228px;
+  height: 228px;
+  margin: auto;
+  border-radius: 114px;
+  border: 2px solid #3d6cb0;
+  position: relative;
+  top: -14px;
+  left: -14px;
+}
+.firstname {
+  color: #000;
+  font-family: "Myriad Pro - Light Semi Ext";
+  font-size: 52px;
+  text-align: center;
+}
+.surname {
+  color: #000;
+  font-family: "Myriad Pro";
+  font-size: 61.5px;
+  text-align: center;
+}
+.proffesia {
+  color: #000;
+  font-family: "Myriad Pro";
+  font-size: 25px;
+  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  margin-left: 0px;
+}
+.conteiner {
+  margin: auto;
+  max-width: 1122px;
+  min-width: 600px;
+  margin-top: 76px;
+}
+.column-left {
+  float: left;
+  background-color: #d3d3d3;
+  width: 38.4%;
+}
+.column-right {
+  margin-left: 43.7%;
+  background-color: #808080;
+  width: 56.3%;
 }
