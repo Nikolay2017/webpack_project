@@ -1,9 +1,7 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var CleanWebpackPlugin = require('clean-webpack-plugin')
-
-const path = require('path');
+var path = require('path');
 module.exports = {
   entry: {
     'index':path.join(__dirname, '/src/index.js')//,
@@ -34,7 +32,6 @@ module.exports = {
                         use: ['css-loader','stylus-loader'],
                     }),
                 },
-                
                 {
                   test: /\.pug$/,
                   loader: 'pug-loader',
@@ -44,7 +41,6 @@ module.exports = {
                 }
             ],
         },
-
   plugins: [
     new ExtractTextPlugin({
       filename: "assets/css/style.css",
