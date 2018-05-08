@@ -1,4 +1,5 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var CleanWebpackPlugin = require('clean-webpack-plugin')
 
@@ -11,6 +12,9 @@ module.exports = {
   output: {
     filename:"assets/js/[name].js",
     path: path.resolve(__dirname, 'dist')
+  },
+  devServer: {
+    overlay: true
   },
   module: {
             rules: [
